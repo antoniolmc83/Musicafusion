@@ -1,0 +1,14 @@
+<a [routerLink]="cancion.link" [title]="cancion.title">
+  <div class="top_letras_items">
+    <div class="top_letras_num">{{ cancion.position }}</div>
+    <div class="top_letras_img">
+      <img alt="" border="0" [src]="cancion.image" width="40" height="40">
+    </div>
+    <div class="top_letras_txt">
+      <div class="top_letras_titulo">{{ cancion.title }}</div>
+      <div class="top_letras_subtitulo"> {{cancion.subtitle }}</div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</a>
+<hr>

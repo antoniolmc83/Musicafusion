@@ -1,21 +1,46 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div id="ctn-barra-top">
+  <div id="barra-top">
+    <div id="barra-top-s1">
+      <div id="panel-usuario-login" style="float: left;">
 
-<router-outlet></router-outlet>
+      </div>
+      <div style="float: left; margin: 1px 5px 0px 0px;" id="panel-usuario-foto"></div>
+      <div style="float: left; margin: 4px 4px 0px 5px; padding-top: 5px;" id="panel-usuario-nombre"></div>
+      <div id="sessionStars" title="Estrellas acumuladas" style="float: left; font-weight: bold; padding-top: 5px;"></div>
+
+    </div>
+    <div id="barra-top-s2">
+      <div class="ctn-btnPublicar"><a title="Publicar en tu facebook" href="javascript:void(0);" class="btnPublicar"
+          onclick="javascript: void(0)"></a></div>
+      <div class="ctn-btnEnviarAmigo"><a title="Enviar a tus amigos" href="javascript:void(0);" class="btnEnviarAmigo"
+          onclick="javascript: void(0)"></a></div>
+      <div class="ctn-like-fb">
+
+
+      </div>
+
+      <div class="ctn-btnPublicar_movil"><a title="Publicar en tu facebook" href="javascript:void(0);" class="btnPublicar_movil"
+          onclick="onPostear( &#39;http://www.musicafusion.com&#39; ); return false;"></a></div>
+      <div class="ctn-btnEnviarAmigo_movil"><a title="Enviar a tus amigos" href="javascript:void(0);" class="btnEnviarAmigo_movil"
+          onclick="onSend( &#39;http://www.musicafusion.com&#39; ); return false;"></a></div>
+      <div class="ctn-like-fb_movil">
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="contenedor-principal">
+  <!-- INICIO-CONTENEDOR_PRINCIPAL - WRAPPER -->
+  <app-header ></app-header>
+  <app-menu></app-menu>
+  <app-content>
+    <router-outlet></router-outlet>
+  </app-content>
+  <!-- FIN-CONTENEDOR_BODYPANEL -->
+  <!-- end content-wrapper -->
+  <div style="clear:both;"></div>
+
+  <app-footer></app-footer>
+</div><!-- FIN-CONTENEDOR_PRINCIPAL -->

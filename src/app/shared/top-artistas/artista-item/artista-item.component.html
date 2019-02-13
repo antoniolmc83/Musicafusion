@@ -1,0 +1,15 @@
+<a [routerLink]="artista.link" [title]="artista.title">
+  <div class="top_artistas_items">
+    <div class="top_artistas_num">{{ artista.position }}</div>
+    <div class="top_artistas_img">
+
+      <img alt="" border="0" [src]="artista.image" width="40" height="40">
+
+    </div>
+    <div class="top_artistas_txt">
+      <div class="top_artistas_titulo">{{ artista.title }}</div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</a>
+<hr>

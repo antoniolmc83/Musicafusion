@@ -1,0 +1,23 @@
+<p>
+  canciones-page works!
+</p>
+<button (click)="agregarColumna()">Agrgar columna</button>
+
+<p-table [value]="cars">
+  <ng-template pTemplate="header">
+    <tr>
+      <th *ngFor="let col of cols">
+        {{col.header}}
+      </th>
+    </tr>
+
+  </ng-template>
+  <ng-template pTemplate="body" let-car>
+    <tr>
+      <td *ngFor="let col of cols">
+        {{car[col.field]}}
+      </td>
+    </tr>
+  </ng-template>
+
+</p-table>
