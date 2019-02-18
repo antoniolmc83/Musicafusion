@@ -8,9 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Musicafusion';
 
-  searchHandler(e){
-    console.log("Froma body: " + e);
-  }
+  
 }
 
 

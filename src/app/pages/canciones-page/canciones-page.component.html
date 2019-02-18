@@ -1,23 +1,26 @@
-<p>
-  canciones-page works!
-</p>
 <button (click)="agregarColumna()">Agrgar columna</button>
-
-<p-table [value]="cars">
-  <ng-template pTemplate="header">
-    <tr>
-      <th *ngFor="let col of cols">
-        {{col.header}}
-      </th>
-    </tr>
-
+<div id="page" style = "position: absolute; z-index: 2" [ngStyle]="{ 'top': getYDivPosition(), 'left': getXDivPosition()}">
+    canciones-page works!
+  </div>  
+<p-table [columns]="scrollableCols" [frozenColumns]="frozenCols" [value]="cars" [scrollable]="true" scrollHeight="200px" frozenWidth="200px" >
+  <ng-template pTemplate="colgroup" let-columns>
+    <colgroup>
+        <col *ngFor="let col of columns" style="width:200px">
+    </colgroup>
   </ng-template>
-  <ng-template pTemplate="body" let-car>
-    <tr>
-      <td *ngFor="let col of cols">
-        {{car[col.field]}}
-      </td>
-    </tr>
+  <ng-template pTemplate="header" let-columns>
+      <tr>
+          <th *ngFor="let col of columns">
+              {{col.header}}
+          </th>
+      </tr>
   </ng-template>
+<ng-template pTemplate="body" let-rowData let-columns="columns">
+    <tr>
+        <td *ngFor="let col of columns" (click)="clickRow($event)">
+            {{rowData[col.field]}}
+        </td>
+    </tr>
+</ng-template>
 
 </p-table>
